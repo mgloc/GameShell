@@ -1,0 +1,15 @@
+Mission goal
+============
+
+Order the plants and find the difference between the 2 files
+
+It is displayed in its entirety by the command
+  $ gsh goal
+It should describe the goal of the mission.
+
+
+Useful commands
+===============
+
+gsh check
+  Checks that the missions has been completed.

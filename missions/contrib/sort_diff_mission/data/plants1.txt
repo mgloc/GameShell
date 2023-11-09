@@ -1,0 +1,20 @@
+    Rose
+    Sunflower
+    Tulip
+    Orchid
+    Daisy
+    Lavender
+    Fern
+    Aloe Vera
+    Bamboo
+    Cactus
+    Jasmine
+    Daffodil
+    Marigold
+    Poinsettia
+    Maple
+    Ivy
+    Venus Flytrap
+    Hydrangea
+    Peony
+    Eucalyptus
