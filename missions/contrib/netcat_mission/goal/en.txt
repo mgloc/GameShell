@@ -1,0 +1,9 @@
+Mission goal
+============
+
+Go inside the place and find the treasure.
+
+Useful commands
+===============
+
+netcat -v ID PORT
