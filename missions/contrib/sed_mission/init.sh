@@ -18,8 +18,8 @@
 #
 # It typically looks like
 _mission_init() (
-  fileToModify=$(eval_gettext '$GSH_HOME/Garden/Flower_garden')/$(gettext "instructions")
-  cat $MISSION_DIR/data/fileForMission.txt > $fileToModify
+  announcement=$(eval_gettext '$GSH_HOME/Garden/Flower_garden')/$(gettext "announcement")
+  cat $MISSION_DIR/data/with_horse/$(gettext "en").txt > $announcement
 )
 
 _mission_init

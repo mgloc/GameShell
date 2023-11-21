@@ -20,11 +20,23 @@ msgstr ""
 msgid   "$GSH_HOME/Garden/Flower_garden"
 msgstr  "$GSH_HOME/Garden/Flower_garden"
 
-msgid   "What is the difference?"
-msgstr  "What is the difference?"
+msgid   "announcement"
+msgstr  "announcement"
 
-msgid "It's not the good answer"
-msgstr "It's not the good answer"
+msgid   "horse"
+msgstr  "horse"
 
-msgid   "instructions"
-msgstr  "instructions"
+msgid   "knight"
+msgstr  "knight"
+
+msgid   "en"
+msgstr  "en"
+
+msgid   "with_knight.en"
+msgstr  "with_knight.en"
+
+msgid   "with_horse.en"
+msgstr  "with_horse.en"
+
+msgid   "There are still errors in the file"
+msgstr  "There are still errors in the file"

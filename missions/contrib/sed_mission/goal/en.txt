@@ -1,16 +1,13 @@
 Mission goal
 ============
 
-This file or one of its more complex variants (refer to the documentation) is
-required.
-
-It is displayed in its entirety by the command
-  $ gsh goal
-It should describe the goal of the mission.
+Edit the file by replacing 
+all instances of "horse" and "Horse" with "knight"
 
 
-Useful commands
-===============
+Commandes utiles
+================
 
-gsh check
-  Checks that the missions has been completed.
+sed FILE
+
+-i

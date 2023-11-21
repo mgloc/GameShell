@@ -18,11 +18,23 @@ msgstr  "$MISSION_DIR/skip/fr.txt"
 msgid   "$GSH_HOME/Garden/Flower_garden"
 msgstr  "$GSH_HOME/Jardin/Jardin_des_fleurs"
 
-msgid "What is the difference?"
-msgstr "Quelle est la différence ?"
+msgid   "announcement"
+msgstr  "annonce"
 
-msgid "It's not the good answer"
-msgstr "Ce n'est pas la bonne réponse"
+msgid   "horse"
+msgstr  "cheval"
 
-msgid   "instructions"
-msgstr  "instructions"
+msgid   "knight"
+msgstr  "chevalier"
+
+msgid   "en"
+msgstr  "fr"
+
+msgid   "with_knight.en"
+msgstr  "with_knight.fr"
+
+msgid   "with_horse.en"
+msgstr  "with_horse.fr"
+
+msgid   "There are still errors in the file"
+msgstr  "Il y a toujours des erreurs dans le fichier"

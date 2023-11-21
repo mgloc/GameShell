@@ -11,15 +11,14 @@
 # It typically looks like
 
 _mission_check() {
-  goodAnswer=$MISSION_DIR/data/goodAnswer.txt
-  answeredFile="$GSH_HOME/Jardin/Jardin_des_fleurs/$(gettext "instructions")"
-  echo "test: $answeredFile"
+  goodAnswer=$MISSION_DIR/data/with_knight/$(gettext "en").txt
+  answeredFile=$(eval_gettext '$GSH_HOME/Garden/Flower_garden')/$(gettext "announcement")
   if cmp -s "$answeredFile" "$goodAnswer"; then
     # The files are the same
     return 0
   else
     # The files aren't the same
-    echo "Wrong answer"
+    echo "$(gettext "There are still errors in the file")"
     return 1
   fi
 }
