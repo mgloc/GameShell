@@ -19,7 +19,7 @@
 # It typically looks like
 _mission_init() {
   new_inventory=$(eval_gettext '$GSH_HOME/Garden/Flower_garden')/$(gettext "new_inventory")
-  sort -R $MISSION_DIR/data/$(gettext "plants.en") | head -n 100 > $new_inventory
+  sort -R $MISSION_DIR/data/plants/$(gettext "en").txt | head -n 100 > $new_inventory
 
   sort -R $new_inventory > $GSH_TMP/random.txt
   random=$GSH_TMP/random.txt

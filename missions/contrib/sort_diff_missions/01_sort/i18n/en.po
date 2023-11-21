@@ -20,8 +20,8 @@ msgstr ""
 msgid   "$GSH_HOME/Garden/Flower_garden"
 msgstr  "$GSH_HOME/Garden/Flower_garden"
 
-msgid   "plants.en"
-msgstr  "plants.en"
+msgid   "en"
+msgstr  "en"
 
 msgid   "old_inventory"
 msgstr  "old_inventory"

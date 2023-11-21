@@ -18,8 +18,8 @@ msgstr  "$MISSION_DIR/skip/fr.txt"
 msgid   "$GSH_HOME/Garden/Flower_garden"
 msgstr  "$GSH_HOME/Jardin/Jardin_des_fleurs"
 
-msgid   "plants.en"
-msgstr  "plants.fr"
+msgid   "en"
+msgstr  "fr"
 
 msgid   "old_inventory"
 msgstr  "ancien_inventaire"
