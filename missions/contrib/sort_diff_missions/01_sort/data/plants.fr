@@ -1,0 +1,344 @@
+Trèfle rouge
+Abeille
+Abutilon
+Achillée
+Agapanthe
+Agastache
+Agave
+Agrostemma
+Ail des ours
+Alchémille
+Aloe vera
+Amapa
+Amarante
+Amaryllis
+Amourette
+Anémone
+Anthémis
+Anthurium
+Aralia
+Arbre à caoutchouc
+Arbre à papillon
+Arbre de Jade
+Armoise
+Armoise annuelle
+Arum
+Asphodèle
+Aubergine
+Aubriète
+Azalée
+Balsamine
+Bambou
+Bambou sacré
+Baobab
+Barbe de Jupiter
+Bégonia
+Bigaradier
+Blechnum
+Bleuet
+Bougainvillier
+Boule de neige
+Bouleau
+Bourrache
+Brunnera
+Cactus
+Cactus de Noël
+Caïmite
+Calendula
+Calla
+Callistemon
+Camélia
+Camomille
+Câprier
+Capucine
+Cardamine des prés
+Caryoptéris
+Céanothe
+Centaurée
+Cerfeuil
+Cerisier
+Chardon
+Châtaignier
+Chervis
+Chèvrefeuille
+Chrysanthème
+Ciboulette
+Ciste
+Clématite
+Colchique
+Consoude
+Cotonéaster
+Crassula
+Cresson
+Cumin
+Cuphéa
+Cyclamen
+Cyprès
+Daphné
+Daphné odora
+Datura
+Delphinium
+Digitale
+Digitale pourpre
+Digitalis
+Echinacée
+Echinops
+Echium
+Edelweiss
+Eucalyptus
+Eucalyptus citronné
+Eupatoire
+Euphorbe
+Euphorbe characias
+Euphraise
+Fenouil
+Fétuque
+Ficoïde
+Forsythia
+Fougère
+Fougère aigle
+Fragon
+Freesia
+Fuchsia
+Gazania
+Gazanie
+Genêt
+Genévrier
+Géranium
+Géranium citronnelle
+Géranium odorant
+Géranium vivace
+Ginkgo biloba
+Gléchome
+Graminée
+Grenadier
+Guède
+Guimauve
+Guirlande de melon
+Hamamélis
+Hélichryse
+Héliotrope
+Hellébore
+Hellébore fétide
+Hémérocalle
+Herbe à chat
+Hibiscus
+Hortensia
+Hosta
+Houblon
+Houx
+Houx crénelé
+Hypéricum
+Immortelle
+Impatiens
+Indigo
+Ipomée
+Iris
+Jacinthe
+Jacinthe des bois
+Jasmin
+Jasmin d'été
+Jasmin d'hiver
+Jonquille
+Kaki
+Kalanchoe
+Kalmia
+Kangourou
+Kiwi
+Laburnum
+Lagure
+Lantana
+Laurier
+Laurier-rose
+Lavande
+Lavatère
+Leucanthème
+Lierre
+Lierre terrestre
+Lilas
+Lilas des Indes
+Lin
+Lin de Nouvelle-Zélande
+Lindernia
+Lis de la Madone
+Lupin
+Luzerne
+Lychnis
+Lys
+Magnolia
+Magnolia grandiflora
+Mahonia
+Marguerite
+Mauve
+Mélilot
+Mélisse
+Menthe
+Mimosa
+Mimosas
+Moutarde
+Muflier
+Mûre
+Mûrier
+Myosotis
+Nasturtium
+Nénuphar
+Nicotiana
+Nigelle
+Nigelle de Damas
+Noisette
+Oeillet de poète
+Oeillets de poète
+Oignon
+Olivier
+Onagre
+Oranger
+Orchidée
+Origan
+Osmanthe
+Oxalis
+Papyrus
+Pâquerette
+Passerose
+Passiflore
+Pavot
+Pélargonium
+Pensée
+Pensée sauvage
+Pétunia
+Phacélie
+Phalaenopsis
+Phlox
+Physalis
+Pied d'alouette
+Pin
+Pissenlit
+Pivoine
+Pois de senteur
+Pourpier
+Primevère
+Prunellier
+Prunus
+Quatre-temps
+Quinoa
+Raifort
+Reine des prés
+Renoncule
+Réséda
+Rhododendron
+Rhubarbe
+Robinia
+Romarin
+Romarin rampant
+Rose
+Rose trémière
+Rosier
+Rudbeckia
+Sagoutier
+Santoline
+Sapin
+Saponaire
+Sauge
+Saulaie
+Saule
+Saule pleureur
+Scabieuse
+Seringat
+Serpentaire
+Serpolet
+Silène
+Souci
+Souci des jardins
+Spirée
+Stévia
+Tabac
+Tabac d'ornement
+Tamaris
+Tanaisie
+Thuya
+Thym
+Tournesol
+Trachélie
+Trèfle
+Troène
+Tulipe
+Tussilage
+Valériane
+Véronique
+Verveine
+Verveine citronnelle
+Vigne
+Violette
+Vipérine
+Wassadou
+Weigelia
+Xanthie
+Xanthorrhée
+Xérocarpe
+Xérophile
+Xérophyte
+Xiphophore
+Xylitol
+Xylocarpe
+Xylopia
+Yacca
+Yarrow
+Yarrowsia
+Yerbamate
+Yigou
+Ylang-ylang
+Youtsa
+Yponomeute
+Yucca
+Yucca gloriosa
+Zain
+Zambèze
+Zamioculcas
+Zèbre
+Zébrina
+Zébu
+Zébulon
+Zelkova
+Zen
+Zénana
+Zénith
+Zénithal
+Zéolithe
+Zéphirine Drouhin
+Zéphyr
+Zéphyrine Drouhin
+Zibeline
+Ziggourat
+Zigzag
+Zinc
+Zincifère
+Zinguer
+Zinia
+Zinnia
+Zircon
+Zirconium
+Ziziphus
+Zodiaque
+Zoïsite
+Zonure
+Zoo
+Zoolâtrie
+Zoolithe
+Zoologie
+Zoophyte
+Zorille
+Zoroastre
+Zoroastrisme
+Zostère
+Zosterops
+Zouave
+Zouk
+Zutique
+Zutiste
+Zwetschgen
+Zwinglianisme
+Zwitterion
+Zwölferkogel
+Zygène
+Zygocactus
+Zygopétale
+Zygopetalum

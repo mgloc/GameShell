@@ -18,11 +18,26 @@ msgstr  "$MISSION_DIR/skip/fr.txt"
 msgid   "$GSH_HOME/Garden/Flower_garden"
 msgstr  "$GSH_HOME/Jardin/Jardin_des_fleurs"
 
-msgid "What is the difference?"
-msgstr "Quelle est la différence ?"
+msgid   "plants.en"
+msgstr  "plants.fr"
 
-msgid "It's not the good answer"
-msgstr "Ce n'est pas la bonne réponse"
+msgid   "old_inventory"
+msgstr  "ancien_inventaire"
 
-msgid   "plants"
-msgstr  "plantes"
+msgid   "new_inventory"
+msgstr  "nouvel_inventaire"
+
+msgid   "sort_old"
+msgstr  "tri_ancien"
+
+msgid   "sort_new"
+msgstr  "tri_nouveau"
+
+msgid   "The files don't exist..."
+msgstr  "Les fichers n'existent pas..."
+
+msgid   "The file sort_old is not sorted"
+msgstr  "Le fichier tri_ancien n'est pas trié"
+
+msgid   "The file sort_new is not sorted"
+msgstr  "Le fichier tri_nouveau n'est pas trié"

@@ -11,22 +11,21 @@
 # It typically looks like
 
 _mission_check() (
-  difference="Daffodil"
+  answers_file=$GSH_TMP/answer.txt
+  answers_list="$(head -n 1 $answers_file)"
+  while IFS= read -r plant; do
+      answers_list="$answers_list, $plant"
+  done < <(tail -n 5 $answers_file)
+  echo "$answers_list"
 
-  printf "%s " "$(gettext "What is the difference?")"
-  read -r answer
+  printf "%s " "$(gettext "Which species have been added to the garden?")"
+  read -r input
 
-  if [ "$difference" != "$answer" ]
-  then
+  if [ "$answers_list" = "$input" ]; then
+    return 0
+  else
     echo "$(gettext "It's not the good answer")"
     return 1
   fi
-
-  if [ "$difference" = "$answer" ]
-  then
-    return 0
-  fi
 )
-
 _mission_check
-

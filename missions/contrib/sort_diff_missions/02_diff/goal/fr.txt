@@ -1,0 +1,15 @@
+Objectif
+========
+
+Quelles espèces ont été ajoutées dans le jardin ?
+
+Lorsque vous connaissez la réponse, lancez la commande ``gsh check``.
+
+La réponse est attendue sous forme de liste :
+"plante 1 plante 2 plante 3"
+et triée par ordre alphabétique.
+
+Commandes utiles
+================
+
+diff FILE

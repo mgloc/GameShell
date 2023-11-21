@@ -1,0 +1,45 @@
+# AUTOMATICALLY GENERATED -- DO NOT EDIT
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# path for the text file containing the goal
+msgid "$MISSION_DIR/goal/en.txt"
+msgstr ""
+
+# path for the text file containing the treasure message
+msgid "$MISSION_DIR/treasure-msg/en.txt"
+msgstr ""
+
+# path for the text file containing the skip message
+msgid "$MISSION_DIR/skip/en.txt"
+msgstr ""
+
+msgid   "$GSH_HOME/Garden/Flower_garden"
+msgstr  "$GSH_HOME/Garden/Flower_garden"
+
+msgid   "plants.en"
+msgstr  "plants.en"
+
+msgid   "old_inventory"
+msgstr  "old_inventory"
+
+msgid   "new_inventory"
+msgstr  "new_inventory"
+
+msgid   "sort_old"
+msgstr  "sort_old"
+
+msgid   "sort_new"
+msgstr  "sort_new"
+
+msgid   "The files don't exist..."
+msgstr  "The files don't exist..."
+
+msgid   "The file sort_old is not sorted"
+msgstr  "The file sort_old is not sorted"
+
+msgid   "The file sort_new is not sorted"
+msgstr  "The file sort_new is not sorted"

@@ -17,15 +17,14 @@
 # in that case.
 #
 # It typically looks like
+_mission_init() {
+  new_inventory=$(eval_gettext '$GSH_HOME/Garden/Flower_garden')/$(gettext "new_inventory")
+  sort -R $MISSION_DIR/data/$(gettext "plants.en") | head -n 100 > $new_inventory
 
-_mission_init() (
-
-  for i in $(seq 2)
-  do
-    plants=$(eval_gettext '$GSH_HOME/Garden/Flower_garden')/$(gettext "plants")_$i
-    cat $MISSION_DIR/data/plants$i.txt > $plants
-  done
-)
-
+  sort -R $new_inventory > $GSH_TMP/random.txt
+  random=$GSH_TMP/random.txt
+  old_inventory=$(eval_gettext '$GSH_HOME/Garden/Flower_garden')/$(gettext "old_inventory")
+  head -n 94 $random > $old_inventory
+  tail -n 6 $random | sort > $GSH_TMP/answer.txt
+}
 _mission_init
-
