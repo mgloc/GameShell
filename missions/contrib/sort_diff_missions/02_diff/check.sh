@@ -15,7 +15,7 @@ _mission_check() (
   answers_list="$(head -n 1 $answers_file)"
   while IFS= read -r plant; do
       answers_list="$answers_list, $plant"
-  done < <(tail -n 5 $answers_file)
+  done < <(tail -n 2 $answers_file)
   echo "$answers_list"
 
   printf "%s " "$(gettext "Which species have been added to the garden?")"

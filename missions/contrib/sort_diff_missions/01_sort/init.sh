@@ -24,7 +24,7 @@ _mission_init() {
   sort -R $new_inventory > $GSH_TMP/random.txt
   random=$GSH_TMP/random.txt
   old_inventory=$(eval_gettext '$GSH_HOME/Garden/Flower_garden')/$(gettext "old_inventory")
-  head -n 94 $random > $old_inventory
-  tail -n 6 $random | sort > $GSH_TMP/answer.txt
+  head -n 97 $random > $old_inventory
+  tail -n 3 $random | sort > $GSH_TMP/answer.txt
 }
 _mission_init
