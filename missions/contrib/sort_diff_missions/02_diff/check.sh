@@ -11,7 +11,7 @@
 # It typically looks like
 
 _mission_check() (
-  answers_file=$GSH_TMP/answer.txt
+  answers_file=$MISSION_DIR/data/answer.txt
   answers_list="$(head -n 1 $answers_file)"
   while IFS= read -r plant; do
       answers_list="$answers_list, $plant"
