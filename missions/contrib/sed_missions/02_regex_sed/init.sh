@@ -18,7 +18,7 @@
 #
 # It typically looks like
 _mission_init() {
-  princess_letter=$(eval_gettext '$GSH_HOME/Main_place')/$(gettext "princess_letter")
+  princess_letter=$(eval_gettext '$GSH_HOME/Castle/Main_building/Throne_room')/$(gettext "princess_letter")
   cat $MISSION_DIR/data/encrypted_file/$(gettext "en").txt > $princess_letter
 }
 _mission_init

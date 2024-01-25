@@ -1,13 +1,8 @@
 Mission goal
 ============
 
-This file or one of its more complex variants (refer to the documentation) is
-required.
-
-It is displayed in its entirety by the command
-  $ gsh goal
-It should describe the goal of the mission.
-
+There have been errors in the text, can you make 
+it readable by removing all these numbers?
 
 Useful commands
 ===============

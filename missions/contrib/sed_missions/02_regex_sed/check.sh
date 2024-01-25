@@ -12,7 +12,7 @@
 
 _mission_check() {
   goodAnswer=$MISSION_DIR/data/answer_file/$(gettext "en").txt
-  answeredFile=$(eval_gettext '$GSH_HOME/Main_place')/$(gettext "princess_letter")
+  answeredFile=$(eval_gettext '$GSH_HOME/Castle/Main_building/Throne_room')/$(gettext "princess_letter")
   if cmp -s "$answeredFile" "$goodAnswer"; then
     # The files are the same
     return 0

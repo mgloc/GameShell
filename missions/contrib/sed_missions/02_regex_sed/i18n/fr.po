@@ -15,8 +15,8 @@ msgstr  "$MISSION_DIR/goal/fr.txt"
 msgid   "$MISSION_DIR/skip/en.txt"
 msgstr  "$MISSION_DIR/skip/fr.txt"
 
-msgid   "$GSH_HOME/Main_place"
-msgstr  "$GSH_HOME/Place_principale"
+msgid   "$GSH_HOME/Castle/Main_building/Throne_room"
+msgstr  "$GSH_HOME/Chateau/Batiment_principal/Salle_du_trone"
 
 msgid   "announcement"
 msgstr  "annonce"
