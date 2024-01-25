@@ -10,21 +10,16 @@
 #
 # It typically looks like
 
-_mission_check() (
-  answers_file=$MISSION_DIR/data/answer.txt
-  answers_list="$(head -n 1 $answers_file)"
-  while IFS= read -r plant; do
-      answers_list="$answers_list, $plant"
-  done < <(tail -n 2 $answers_file)
-
-  printf "%s " "$(gettext "Which species have been added to the garden?")"
-  read -r input
-
-  if [ "$answers_list" = "$input" ]; then
+_mission_check() {
+  goodAnswer=$MISSION_DIR/data/with_knight/$(gettext "en").txt
+  answeredFile=$(eval_gettext '$GSH_HOME/Main_place')/$(gettext "announcement")
+  if cmp -s "$answeredFile" "$goodAnswer"; then
+    # The files are the same
     return 0
   else
-    echo "$(gettext "It's not the good answer")"
+    # The files aren't the same
+    echo "$(gettext "There are still errors in the file")"
     return 1
   fi
-)
+}
 _mission_check

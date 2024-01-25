@@ -1,0 +1,34 @@
+# AUTOMATICALLY GENERATED -- DO NOT EDIT
+msgid   ""
+msgstr  "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+
+#, sh-format
+msgid   "$GSH_HOME/Castle/Cellar"
+msgstr  "$GSH_HOME/Chateau/Cave"
+
+# path for the text file containing the goal
+msgid   "$MISSION_DIR/goal/en.txt"
+msgstr  "$MISSION_DIR/goal/fr.txt"
+
+# path for the text file containing the skip message
+msgid   "$MISSION_DIR/skip/en.txt"
+msgstr  "$MISSION_DIR/skip/fr.txt"
+
+msgid   "$GSH_HOME/Main_place"
+msgstr  "$GSH_HOME/Place_principale"
+
+msgid   "announcement"
+msgstr  "annonce"
+
+msgid   "horse"
+msgstr  "cheval"
+
+msgid   "knight"
+msgstr  "chevalier"
+
+msgid   "en"
+msgstr  "fr"
+
+msgid   "There are still errors in the file"
+msgstr  "Il y a toujours des erreurs dans le fichier"

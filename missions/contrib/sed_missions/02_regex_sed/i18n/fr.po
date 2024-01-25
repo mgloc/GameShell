@@ -15,26 +15,17 @@ msgstr  "$MISSION_DIR/goal/fr.txt"
 msgid   "$MISSION_DIR/skip/en.txt"
 msgstr  "$MISSION_DIR/skip/fr.txt"
 
-msgid   "$GSH_HOME/Garden/Flower_garden"
-msgstr  "$GSH_HOME/Jardin/Jardin_des_fleurs"
+msgid   "$GSH_HOME/Main_place"
+msgstr  "$GSH_HOME/Place_principale"
 
 msgid   "announcement"
 msgstr  "annonce"
 
-msgid   "horse"
-msgstr  "cheval"
-
-msgid   "knight"
-msgstr  "chevalier"
-
 msgid   "en"
 msgstr  "fr"
 
-msgid   "with_knight.en"
-msgstr  "with_knight.fr"
+msgid "princess_letter"
+msgstr "lettre_de_la_princesse"
 
-msgid   "with_horse.en"
-msgstr  "with_horse.fr"
-
-msgid   "There are still errors in the file"
-msgstr  "Il y a toujours des erreurs dans le fichier"
+msgid   "I still can't understand the file"
+msgstr  "Je ne peux toujours pas comprendre le fichier"

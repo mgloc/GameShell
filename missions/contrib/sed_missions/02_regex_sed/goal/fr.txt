@@ -1,0 +1,11 @@
+Objectif
+========
+
+Il y a eu des erreurs dans le texte, peux-tu le rendre lisible 
+en supprimant tout ces chiffres ?
+
+
+Commandes utiles
+================
+
+sed REGEX FILE
