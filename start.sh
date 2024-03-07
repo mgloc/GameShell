@@ -177,13 +177,13 @@ _passport() {
     printf "$(gettext "Player's name:") "
     read -r NOM
   done
-  EMAIL=""
-  while [ -z "$EMAIL" ]
+  GAME_SESSION_ID=""
+  while [ -z "$GAME_SESSION_ID" ]
   do
-    printf "$(gettext "Player's email:") "
-    read -r EMAIL
+    printf "$(gettext "session id:") "
+    read -r GAME_SESSION_ID
   done
-  echo "  $NOM <$EMAIL>" > "$PASSPORT"
+  echo "  $NOM <$GAME_SESSION_ID>" > "$PASSPORT"
 }
 
 _confirm_passport() {
