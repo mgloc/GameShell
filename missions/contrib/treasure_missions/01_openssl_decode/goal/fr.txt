@@ -1,0 +1,10 @@
+Objectif
+========
+
+Accèder au contenu du coffre au trésor chiffré. Le déchiffrer dans un fichier "coffre_au_tresor.txt"
+
+Commandes utiles
+================
+
+openssl
+algorithme de chiffrement symétrique utilisé pour chiffrer le fichier : AES avec un mode de chiffrement CBC (AES-256-CBC)

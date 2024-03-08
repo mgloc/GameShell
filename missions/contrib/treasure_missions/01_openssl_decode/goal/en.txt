@@ -1,0 +1,13 @@
+Mission goal
+============
+In order to index the species in the flower garden, 
+the gardeners made a new inventory of the plants.
+
+Order in 2 new files named sort_old and 
+sort_new the inventories.
+
+
+Useful commands
+===============
+
+du FILE
