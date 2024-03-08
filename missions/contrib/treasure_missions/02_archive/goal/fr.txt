@@ -1,0 +1,10 @@
+Objectif
+========
+
+Récupérer tout les ruby du coffre au trésor et placez les dans votre Coffre (dans votre hutte, 
+dans la forêt).
+
+Commandes utiles
+================
+
+tar
