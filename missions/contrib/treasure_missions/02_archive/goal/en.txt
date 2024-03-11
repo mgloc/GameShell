@@ -1,13 +1,10 @@
 Mission goal
 ============
-In order to index the species in the flower garden, 
-the gardeners made a new inventory of the plants.
 
-Order in 2 new files named sort_old and 
-sort_new the inventories.
+Collect all the ruby that you can find in the treasure Chest, and put them in your chest in your hut in the forest.
 
 
 Useful commands
 ===============
 
-du FILE
+tar

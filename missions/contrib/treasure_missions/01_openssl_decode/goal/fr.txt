@@ -1,7 +1,8 @@
 Objectif
 ========
 
-Accèder au contenu du coffre au trésor chiffré. Le déchiffrer dans un fichier "coffre_au_tresor.txt"
+Un coffre chiffré se trouve dans le Coffre fort de la Salle du trone, accèdez à son contenu en utilisant le mot de passe.
+Le déchiffrer dans un fichier "coffre_au_tresor.txt"
 
 Commandes utiles
 ================

@@ -10,7 +10,7 @@
 #
 # It typically looks like
 
-# Receives coin number as first argument.
+# Receives ruby number as first argument.
 _mission_check() (
     ruby_name="$(gettext "ruby")_$1"
     GSH_CHEST="$(eval_gettext '$GSH_HOME/Forest/Hut/Chest')"
@@ -26,7 +26,7 @@ _mission_check() (
         return 1
     fi
 
-    # check the coin.
+    # check the content of the ruby
     if ! cmp -s "$GSH_CHEST/$ruby_name" "$GSH_TMP/$ruby_name"
     then
         echo "$(eval_gettext "The ruby '\$ruby_name' has been tampered with...")"
@@ -36,6 +36,7 @@ _mission_check() (
     return 0
 )
 
+# Check if each ruby (22 ruby) is in the chest
 for ((i = 1; i <= 22; i++)); do
     _mission_check "$i"
 done

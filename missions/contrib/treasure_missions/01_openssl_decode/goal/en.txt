@@ -1,13 +1,11 @@
 Mission goal
 ============
-In order to index the species in the flower garden, 
-the gardeners made a new inventory of the plants.
 
-Order in 2 new files named sort_old and 
-sort_new the inventories.
-
+An encrypted chest is located inside the Throne Room's Safe, access its content using the password.
+Decrypt it into a file named "treasure_chest.txt"
 
 Useful commands
 ===============
 
-du FILE
+openssl
+symmetric encryption algorithm used to encrypt the file: AES with CBC mode (AES-256-CBC)

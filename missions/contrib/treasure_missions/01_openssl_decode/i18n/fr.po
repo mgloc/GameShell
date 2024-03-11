@@ -17,8 +17,8 @@ msgstr  "$GSH_HOME/Chateau/Batiment_principal/Salle_du_trone/Coffre_fort"
 msgid   "treasure_chest"
 msgstr  "coffre_au_tresor"
 
-msgid   "The file treasure_chest.txt doesn't exist..."
-msgstr  "The file treasure_chest.txt doesn't exist..."
+msgid   "The file 'treasure_chest.txt' doesn't exist..."
+msgstr  "The file 'treasure_chest.txt' doesn't exist..."
 
-msgid   "You did not decrypt the file treasure_chest.enc"
-msgstr  "You did not decrypt the file treasure_chest.enc"
+msgid   "You did not decrypt the file 'treasure_chest.enc'"
+msgstr  "You did not decrypt the file 'treasure_chest.enc'"

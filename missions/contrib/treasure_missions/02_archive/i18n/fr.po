@@ -18,7 +18,7 @@ msgid "$GSH_HOME/Forest/Hut/Chest"
 msgstr "$GSH_HOME/Foret/Hutte/Coffre"
 
 msgid   "Treasure_chest"
-msgstr  "Coffre_au_trésor"
+msgstr  "Coffre_au_tresor"
 
 msgid   "ruby"
 msgstr  "ruby"
@@ -27,7 +27,7 @@ msgid   "sapphire"
 msgstr  "saphire"
 
 msgid   "money"
-msgstr  "pièce"
+msgstr  "piece"
 
 msgid   "emerald"
 msgstr  "émeraude"

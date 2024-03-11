@@ -18,9 +18,10 @@
 #
 # It typically looks like
 
+# Function that will create N gemstones in $GSH_TMP
 function put_gems() {
-    gemstone="$1"  # Name of the gem
-    N="$2"    # Number of gems to create
+    gemstone="$1"
+    N="$2"
 
     # Loop to create gems
     for ((i = 1; i <= N; i++)); do

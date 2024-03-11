@@ -16,7 +16,7 @@ _mission_check() {
   # check if the file exist
   if [ ! -f "$treasure_chest" ]
     then
-        echo "$(eval_gettext "The file treasure_chest.txt doesn't exist...")"
+        echo "$(eval_gettext "The file 'treasure_chest.txt' doesn't exist...")"
         return 1
   fi
 
@@ -24,7 +24,7 @@ _mission_check() {
     return 0
   else
   # The files aren't the same
-      echo "$(gettext "You did not decrypt the file treasure_chest.enc")"
+      echo "$(gettext "You did not decrypt the file 'treasure_chest.enc'")"
       return 1
   fi
 }
