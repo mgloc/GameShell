@@ -38,8 +38,8 @@ msgstr  "sort_new"
 msgid   "The files don't exist..."
 msgstr  "The files don't exist..."
 
-msgid   "The file sort_old is not sorted"
-msgstr  "The file sort_old is not sorted"
+msgid   "The file 'sort_old' is not sorted"
+msgstr  "The file 'sort_old' is not sorted"
 
-msgid   "The file sort_new is not sorted"
-msgstr  "The file sort_new is not sorted"
+msgid   "The file 'sort_new' is not sorted"
+msgstr  "The file 'sort_new' is not sorted"

@@ -1,15 +1,15 @@
 Objectif
 ========
 
-Afin de répertorier les différentes espèce 
+Afin de répertorier les différentes espèces 
 du Jardin des fleurs, 
-les jardiniers ont réalisés un nouvel inventaire du jardin.
+les jardiniers ont réalisé un nouvel inventaire du jardin.
 
 Triez dans des nouveaux fichiers nommés 
-fichiers tri_ancien et tri_nouveau ces inventaires.
+fichiers "tri_ancien" et "tri_nouveau" ces inventaires.
 
 
 Commandes utiles
 ================
 
-sort FILE
+sort FICHIER

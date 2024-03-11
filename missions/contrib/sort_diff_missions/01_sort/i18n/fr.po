@@ -36,8 +36,8 @@ msgstr  "tri_nouveau"
 msgid   "The files don't exist..."
 msgstr  "Les fichers n'existent pas..."
 
-msgid   "The file sort_old is not sorted"
-msgstr  "Le fichier tri_ancien n'est pas trié"
+msgid   "The file 'sort_old' is not sorted"
+msgstr  "Le fichier 'tri_ancien' n'est pas trié"
 
-msgid   "The file sort_new is not sorted"
-msgstr  "Le fichier tri_nouveau n'est pas trié"
+msgid   "The file 'sort_new' is not sorted"
+msgstr  "Le fichier 'tri_nouveau' n'est pas trié"

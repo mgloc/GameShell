@@ -11,19 +11,24 @@
 # It typically looks like
 
 _mission_check() (
-  answers_file=$MISSION_DIR/data/answer.txt
-  answers_list="$(head -n 1 $answers_file)"
+  # Get the answer_file
+  answers_file=$GSH_TMP/answer.txt
+
+  # Construct the answer string
+  answers_string="$(head -n 1 $answers_file)"
   while IFS= read -r plant; do
-      answers_list="$answers_list, $plant"
+      answers_string="$answers_string, $plant"
   done < <(tail -n 2 $answers_file)
 
+  # print the check question in the shell:
   printf "%s " "$(gettext "Which species have been added to the garden?")"
   read -r input
 
-  if [ "$answers_list" = "$input" ]; then
+  # Compare the user's input with the answer
+  if [ "$answers_string" = "$input" ]; then
     return 0
   else
-    echo "$(gettext "It's not the good answer")"
+    echo "$(gettext "It's not the answer")"
     return 1
   fi
 )

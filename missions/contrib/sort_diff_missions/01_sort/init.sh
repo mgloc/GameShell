@@ -18,9 +18,15 @@
 #
 # It typically looks like
 _mission_init() {
+
+  # Create the file "new_inventory" in the Flower_garden
   new_inventory=$(eval_gettext '$GSH_HOME/Garden/Flower_garden')/$(gettext "new_inventory")
+
+  # Puts a 100 random plants in the file "new_inventory"
   sort -R $MISSION_DIR/data/plants/$(gettext "en").txt | head -n 100 > $new_inventory
 
+  # Create the file "old_inventory"
+  # Choose 97 random plants of "new_inventory" to putt in "old_inventory"
   sort -R $new_inventory > $GSH_TMP/random.txt
   random=$GSH_TMP/random.txt
   old_inventory=$(eval_gettext '$GSH_HOME/Garden/Flower_garden')/$(gettext "old_inventory")

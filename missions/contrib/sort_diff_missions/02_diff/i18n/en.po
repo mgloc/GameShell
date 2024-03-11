@@ -23,5 +23,5 @@ msgstr  "$GSH_HOME/Garden/Flower_garden"
 msgid   "Which species have been added to the garden?"
 msgstr  "Which species have been added to the garden?"
 
-msgid "It's not the good answer"
-msgstr "It's not the good answer"
+msgid "It's not the answer"
+msgstr "It's not the answer"
