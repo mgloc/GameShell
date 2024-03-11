@@ -15,11 +15,11 @@ msgstr  "$MISSION_DIR/goal/fr.txt"
 msgid   "$MISSION_DIR/skip/en.txt"
 msgstr  "$MISSION_DIR/skip/fr.txt"
 
-msgid   "$GSH_HOME/Main_place"
+msgid   "$GSH_HOME/Main_square"
 msgstr  "$GSH_HOME/Place_principale"
 
-msgid   "announcement"
-msgstr  "annonce"
+msgid   "missive"
+msgstr  "missive"
 
 msgid   "horse"
 msgstr  "cheval"
@@ -30,5 +30,5 @@ msgstr  "chevalier"
 msgid   "en"
 msgstr  "fr"
 
-msgid   "There are still errors in the file"
-msgstr  "Il y a toujours des erreurs dans le fichier"
+msgid   "There are still errors in the missive"
+msgstr  "Il y a toujours des erreurs dans la missive"

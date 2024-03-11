@@ -18,14 +18,11 @@ msgstr  "$MISSION_DIR/skip/fr.txt"
 msgid   "$GSH_HOME/Castle/Main_building/Throne_room"
 msgstr  "$GSH_HOME/Chateau/Batiment_principal/Salle_du_trone"
 
-msgid   "announcement"
-msgstr  "annonce"
-
 msgid   "en"
 msgstr  "fr"
 
 msgid "princess_letter"
 msgstr "lettre_de_la_princesse"
 
-msgid   "I still can't understand the file"
-msgstr  "Je ne peux toujours pas comprendre le fichier"
+msgid   "I still can't understand the letter"
+msgstr  "Je ne peux toujours pas comprendre la lettre"

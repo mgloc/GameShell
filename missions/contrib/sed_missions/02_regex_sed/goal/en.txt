@@ -1,8 +1,11 @@
 Mission goal
 ============
 
-There have been errors in the text, can you make 
-it readable by removing all these numbers?
+The princess writes a letter to her father from the dragon's lair.
+To prevent it from being intercepted, she mixes letters and numbers.
+
+The king receives this letter in the Throne room, 
+can you make the letter readable by removing all these numbers?
 
 Useful commands
 ===============

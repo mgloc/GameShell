@@ -1,13 +1,12 @@
 Mission goal
 ============
-
-Edit the file by replacing 
-all instances of "horse" and "Horse" with "knight"
-
+The princess has been captured by a dragon.
+On the Main square, the herald reads the missive requesting the assistance of knights.
+Unfortunately, he realizes that errors have crept into the letter.
+Help him by replacing all instances of "horse" and "Horse" with "knight".
 
 Commandes utiles
 ================
 
 sed FILE
-
 -i

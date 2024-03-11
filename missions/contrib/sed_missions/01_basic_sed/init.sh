@@ -18,8 +18,8 @@
 #
 # It typically looks like
 _mission_init() (
-  announcement=$(eval_gettext '$GSH_HOME/Main_place')/$(gettext "announcement")
-  cat $MISSION_DIR/data/with_horse/$(gettext "en").txt > $announcement
+  missive=$(eval_gettext '$GSH_HOME/Main_square')/$(gettext "missive")
+  cat $MISSION_DIR/data/with_horse/$(gettext "en").txt > $missive
 )
 
 _mission_init

@@ -17,17 +17,11 @@ msgstr ""
 msgid "$MISSION_DIR/skip/en.txt"
 msgstr ""
 
-msgid   "$GSH_HOME/Main_place"
-msgstr  "$GSH_HOME/Main_place"
-
-msgid   "announcement"
-msgstr  "announcement"
-
 msgid   "en"
 msgstr  "en"
 
 msgid "princess_letter"
 msgstr "princess_letter"
 
-msgid   "I still can't understand the file"
-msgstr  "Je ne peux toujours pas comprendre le fichier"
+msgid   "I still can't understand the letter"
+msgstr  "I still can't understand the letter"

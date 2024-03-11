@@ -18,7 +18,7 @@ _mission_check() {
     return 0
   else
     # The files aren't the same
-    echo "$(gettext "I still can't understand the file")"
+    echo "$(gettext "I still can't understand the letter")"
     return 1
   fi
 }

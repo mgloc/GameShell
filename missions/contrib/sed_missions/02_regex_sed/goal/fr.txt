@@ -1,11 +1,13 @@
 Objectif
 ========
 
-Il y a eu des erreurs dans le texte, peux-tu le rendre lisible 
-en supprimant tout ces chiffres ?
+La princesse, écrit une lettre à son père depuis l'antre du dragon. 
+Pour que celle-ci ne soit interceptée, elle mélange des lettres et des chiffres.
 
+Le roi reçoit cette lettre dans la Salle du trone, 
+Pouvez-vous la rendre lisible en supprimant tout ces chiffres ?
 
 Commandes utiles
 ================
 
-sed REGEX FILE
+sed REGEX FICHIER

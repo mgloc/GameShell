@@ -1,13 +1,13 @@
 Objectif
 ========
 
-Modifier le fichier en remplaçant 
-toute les instances de "cheval" et "Cheval" par "chevalier"
-(sur la Place_principale)
+La princesse a été capturée par un dragon.
+Sur la Place principale, le héraut lit la missive qui demande l'aide de chevaliers.
+Malheureusement, il se rend compte que des erreurs se sont glissées dans la lettre.
+Aidez le, en remplaçant toute les instances de "cheval" et "Cheval" par "chevalier".
 
 Commandes utiles
 ================
 
 sed FILE
-
 -i

@@ -12,13 +12,13 @@
 
 _mission_check() {
   goodAnswer=$MISSION_DIR/data/with_knight/$(gettext "en").txt
-  answeredFile=$(eval_gettext '$GSH_HOME/Main_place')/$(gettext "announcement")
+  answeredFile=$(eval_gettext '$GSH_HOME/Main_square')/$(gettext "missive")
   if cmp -s "$answeredFile" "$goodAnswer"; then
     # The files are the same
     return 0
   else
     # The files aren't the same
-    echo "$(gettext "There are still errors in the file")"
+    echo "$(gettext 'There are still errors in the missive')"
     return 1
   fi
 }
