@@ -1,7 +1,10 @@
 Objectif
 ========
 
-S'introduire dans la base et récupérer le trésor.
+Dans un tiroir de l'office de Merlin, tu as trouvé un parchemin qui indique la localisation de sa reserve secrète de potions.
+Peux-tu y aller et récupérer la fiole Whalien 52 ?
+Une séquence magique de 3 chiffres est inscrite au bas de 
+la fiole. Regardez ces chiffres et souvenez vous en.
 
 Commandes utiles
 ================

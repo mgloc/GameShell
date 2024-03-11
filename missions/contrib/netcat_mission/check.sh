@@ -11,16 +11,28 @@
 # It typically looks like
 
 _mission_check() {
-  treasure="irhueta241ez12"
-
-  printf "%s " "$(gettext "What is the treasure?")"
-  read -r input
-
-  if [ "$treasure" = "$input" ]; then
-    return 0
-  else
-    echo "$(gettext "You didn't get the treasure")"
+  real_key=$(cat "$GSH_TMP/digits.txt")
+  given_key=""
+  
+  while true
+  do
+    printf "%s " "$(gettext "What are the 4 digits inscribed on the base of the vial?")"
+    read -r given_key
+    case "$given_key" in
+      "" | *[!0-9]*)
+        :
+        ;;
+      *)
+        break
+        ;;
+    esac
+  done
+  # don't check with '-ne' is it would accept non numerical answers!
+  if [ "$real_key" != "$given_key" ]
+  then
+    echo "$(gettext "Those digits are not correct!")"
     return 1
   fi
+  return 0
 }
 _mission_check

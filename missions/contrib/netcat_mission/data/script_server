@@ -1,0 +1,51 @@
+#!/bin/env python
+
+# echo-server.py
+import socket
+import sys
+import re
+
+filename = sys.argv[1]
+
+m1 = sys.argv[2] + "\n"
+m2 = sys.argv[3] + "\n"
+
+# messages:
+with open(filename, 'r') as file:
+    file_content = file.read()
+
+HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
+PORT = 1306  # Port to listen on (non-privileged ports are > 1023)
+                       
+# with statement : ensures proper acquisition and release of resources
+# => no need to call s.close()
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
+
+    # bind to the port :  empty string in the ip field
+    # => the server listen to requests coming from other computers on the network 
+    server.bind(("", PORT))
+    print ("socket binded to %s" %(PORT)) 
+
+    # put the socket into listening mode 
+    server.listen()
+    print ("socket is listening")
+
+    # Establish connection with client
+    client, addr = server.accept()
+        
+    with client:
+        print ('Got connection from', addr)
+        
+        # send a thank you message to the client. encoding to send byte type. 
+        client.send(m1.encode())
+
+        buffer = client.recv(1024)
+        print("data:", buffer)
+        
+        answer = buffer.decode("utf8")
+        print("client answer:", answer)
+
+        if re.search(r'y|Y|o|O|0', answer):
+            client.send(file_content.encode())
+        else:
+            client.send(m2.encode())

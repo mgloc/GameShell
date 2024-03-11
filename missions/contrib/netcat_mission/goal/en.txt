@@ -1,7 +1,10 @@
 Mission goal
 ============
 
-Go inside the place and find the treasure.
+In a drawer of Merlin's office you found a parchment indicating the location of the magic shop, containing his secret potions stock.
+Can you go there and get the Whalien 52 vial?
+The base of this vial is inscribed with a magical sequence of 
+digits. Look at those digits and remember them.
 
 Useful commands
 ===============
