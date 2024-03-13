@@ -1,0 +1,26 @@
+name: clone_api
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: ["feature/api"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy folder content recursively to remote
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: api
+          remote: /home/lenuage/www/gameshell.org
+          rmRemote: true
+          host: ${{ vars.SSH_HOST }}
+          username: ${{ vars.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
