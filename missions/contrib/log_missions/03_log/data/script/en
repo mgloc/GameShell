@@ -1,0 +1,107 @@
+#!/bin/env python
+
+import random
+import sys
+
+filepath = sys.argv[1]
+
+family_names = [
+    "Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Martinez",
+    "Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson", "Thomas", "Taylor", "Moore", "Jackson", "Martin",
+    "Lee", "Perez", "Thompson", "White", "Harris", "Sanchez", "Clark", "Ramirez", "Lewis", "Robinson",
+    "Walker", "Young", "Allen", "King", "Wright", "Scott", "Torres", "Nguyen", "Hill", "Flores", "Green",
+    "Adams", "Nelson", "Baker", "Hall", "Rivera", "Campbell", "Mitchell", "Carter", "Roberts", "Gomez",
+    "Phillips", "Evans", "Turner", "Diaz", "Parker", "Cruz", "Edwards", "Collins", "Reyes", "Stewart",
+    "Morris", "Morales", "Murphy", "Cook", "Rogers", "Gutierrez", "Ortiz", "Morgan", "Cooper", "Peterson",
+    "Bailey", "Reed", "Kelly", "Howard", "Ramos", "Kim", "Cox", "Ward", "Richardson", "Watson", "Brooks",
+    "Chavez", "Wood", "James", "Bennett", "Gray", "Mendoza", "Ruiz", "Hughes", "Price", "Alvarez", "Castillo",
+    "Sanders", "Patel"
+]
+
+names = [
+    "James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas",
+    "Christopher", "Daniel", "Matthew", "Anthony", "Donald", "Mark", "Paul", "Steven", "Andrew", "Kenneth",
+    "Joshua", "George", "Kevin", "Brian", "Edward", "Ronald", "Timothy", "Jason", "Jeffrey", "Ryan", "Jacob",
+    "Gary", "Nicholas", "Eric", "Stephen", "Jonathan", "Larry", "Justin", "Scott", "Brandon", "Benjamin", "Samuel",
+    "Frank", "Gregory", "Raymond", "Alexander", "Patrick", "Jack", "Dennis", "Jerry", "Tyler", "Aaron", "Jose",
+    "Henry", "Adam", "Douglas", "Nathan", "Peter", "Zachary", "Kyle", "Walter", "Harold", "Jeremy", "Ethan",
+    "Carl", "Keith", "Roger", "Gerald", "Christian", "Terry", "Sean", "Arthur", "Austin", "Noah", "Lawrence",
+    "Jesse", "Joe", "Bryan", "Billy", "Jordan", "Albert", "Dylan", "Bruce", "Willie", "Gabriel", "Alan", "Juan",
+    "Wayne", "Roy", "Ralph", "Randy", "Eugene", "Vincent", "Russell", "Louis", "Philip", "Bobby", "Johnny",
+    "Logan", "Cameron", "Javier", "Phillip", "Johnny"
+]
+numbers = list(range(1, 11))  # List of numbers from 1 to 10
+gates_numbers = [1, 2, 3, 4]  # List of gate numbers
+shipments = ["jewelry", "food", "bread", "fabrics", "spices", "clothing", "fruits", "vegetables", "tools", "furniture", "drinks", "toys"]  # List of shipments
+species = ["elf", "dwarf", "human", "gnome", "mermaid", "centaur", "werewolf", "vampire", "goblin", "fairy", "troll", "wizard", "witch"]  # List of species
+weights_visitors = [0.2, 0.4, 0.9, 0.2, 0.1, 0.5, 0.6, 0.3, 0.3, 0.7, 0.3, 0.6, 0.7]
+# [0, 0.4, 0.7, 0.1, 0, 0, 0.3, 0.1, 0.5, 0.5, 0.7, 0.1, 0.05]
+# [0.2, 0.4, 0.9, 0.2, 0.1, 0.5, 0.6, 0.3, 0.3, 0.7, 0.3, 0.6, 0.7]
+log = []
+
+# Generating log entries
+while len(log) < 2000:
+    # Generating timestamps from 00:00 to 23:59
+    hour = random.randint(0, 23)
+    minute = random.randint(0, 59)
+    timestamp = f"{hour:02d}:{minute:02d}"
+
+    gate_number = random.choice(gates_numbers)
+    gate_number_visitors = random.choices(gates_numbers, weights=[0.7, 0.4, 0.2, 0.1])[0]
+    entry_type = random.choices(["visitor", "merchant", "error", "backup"], weights=[0.7, 0.3, 0.05, 0.05])[0]
+
+    if entry_type == "merchant":
+        if 5 <= hour < 8:
+            time_period = "morning"
+        elif 10 <= hour < 15:
+            time_period = "lunch time"
+        else:
+            time_period = "dinner time"
+        
+        merchant_family_name = random.choice(family_names)
+        shipment = random.choice(shipments)
+        entry = f"{timestamp} - Gate: {gate_number} - Merchant {merchant_family_name} with a shipment of {shipment} entered"
+    
+    elif entry_type == "visitor":
+        if 9 <= hour < 11:
+            time_period = "9am-11am"
+        elif 11 <= hour < 13:
+            time_period = "11am-1pm"
+        elif 13 <= hour < 16:
+            time_period = "1pm-4pm"
+        elif 16 <= hour < 18:
+            time_period = "4pm-6pm"
+        else:
+            time_period = "6pm-3am"
+        
+        if random.random() < 0.5:
+            visitor_name = random.choice(names)
+            family_name = random.choice(family_names)
+            visitor_species = random.choices(species, weights=weights_visitors)[0]
+            entry = f"{timestamp} - Gate: {gate_number_visitors} - Single visitor: {visitor_name} {family_name} entered - Species: {visitor_species}"
+        else:
+            family_name = random.choice(family_names)
+            visitor_species = random.choices(species, weights=weights_visitors)[0]
+            entry = f"{timestamp} - Gate: {gate_number_visitors} - Visitors: {family_name} family entered - Species: {visitor_species}"
+    
+    elif entry_type == "error":
+        species_1 = random.choices(species, weights=[0, 0.4, 0.7, 0.1, 0, 0, 0.3, 0.1, 0.5, 0.5, 0.7, 0.1, 0.05])[0]
+        species_2 = random.choices(species, weights=[0, 0.4, 0.7, 0.1, 0, 0, 0.3, 0.1, 0.5, 0.5, 0.7, 0.1, 0.05])[0]
+        error_type = random.choices(["Security breach detected", "Altercation detected"], weights=[0.2, 0.8])[0]
+        if error_type == "Altercation detected":
+            entry = f"{timestamp} - Gate: {gate_number} - Error: {error_type} - {species_1} - {species_2}"
+        else:
+            entry = f"{timestamp} - Gate: {gate_number} - Error: {error_type}"
+    
+    else:  # entry_type == "backup"
+        entry = f"{timestamp} - Gate: {gate_number} - Backup requested"
+    
+    log.append(entry)
+
+# Sorting log entries by timestamp
+log.sort()
+
+# Writing log entries to file
+with open(filepath, "w") as file:
+    for entry in log:
+        file.write(f"{entry}\n")

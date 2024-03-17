@@ -1,0 +1,10 @@
+Instructions pour les gardes :
+Veuillez vous assurer de suivre ce modèle pour les enregistrements !
+
+journal du (Date) :
+(Horodatage) - Porte : (Numéro de porte) - Visiteurs : famille (Nom de famille) - espèce : (Espèce)
+(Horodatage) - Porte : (Numéro de porte) - Visiteur seul : (Prénom) (Nom de famille) - espèce : (Espèce)
+(Horodatage) - Porte : (Numéro de porte) - Marchand (Nom de famille) avec une cargaison de (Cargaison)
+(Horodatage) - Porte : (Numéro de porte) - Erreur : Violation de sécurité détectée
+(Horodatage) - Porte : (Numéro de porte) - Erreur : Altercation détectée - (Espèce 1) - (Espèce 2)
+(Horodatage) - Porte : (Numéro de porte) - Demande de renfort

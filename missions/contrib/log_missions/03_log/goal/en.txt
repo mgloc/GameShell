@@ -1,0 +1,10 @@
+Mission goal
+============
+
+In the guard room (in the Main Building, in the Castle) are located the records of the castle entries. Retrieve the one from June 13th and analyze it.
+
+Which hour appears most frequently in the log?
+When you have it, run the command ``gsh check``.
+
+Useful commands
+===============

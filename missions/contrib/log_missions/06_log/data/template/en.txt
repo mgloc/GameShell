@@ -1,0 +1,10 @@
+Intructions for the Gate Guard:
+Plese make sure to follow this template for the records!
+
+log for (Date) : 
+(Timestamp) - Gate: (Gates number) - Visitors: (Family name) family entered - species: (Species)
+(Timestamp) - Gate: (Gates number) - Single visitor: (Name) (Family name) entered -  species: (Species)
+(Timestamp) - Gate: (Gates number) - Merchant (Family name) with a shipment of (Shipment) entered
+(Timestamp) - Gate: (Gates number) - Error: Security breach detected
+(Timestamp) - Gate: (Gates number) - Error: Altercation detected - (Species 1) - (Species 2)
+(Timestamp) - Gate: (Gates number) - Backup requested

@@ -1,0 +1,12 @@
+Mission goal
+============
+
+In the guard room (in the Main Building, in the Castle) are located the records of the castle entries. Retrieve the one from June 13th and analyze it.
+
+Which is the most frequent time at which errors have been recorded?
+When you have it, run the command ``gsh check``.
+
+Useful commands
+===============
+
+grep

@@ -1,0 +1,12 @@
+Mission goal
+============
+
+In the guard room (in the Main Building, in the Castle) are located the records of the castle entries. Retrieve the one from June 13th and analyze it.
+
+What is the species that fights the most?
+When you have it, run the command ``gsh check``.
+
+Useful commands
+===============
+
+grep

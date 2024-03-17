@@ -1,0 +1,11 @@
+Objectif
+========
+
+Dans la salle des gardes (dans Batiment Principal, dans le Chateau) se trouve les fichiers journaux des entrées du chateau.
+Récupérer celui du 13 juin et analyser le.
+
+Quelle heure apparaît le plus dans le journal ?
+Lorsque vous connaissez la réponse, lancez la commande ``gsh check``.
+
+Commandes utiles
+================

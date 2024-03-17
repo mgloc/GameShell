@@ -1,3 +1,5 @@
 sort_diff_missions
 sed_missions
 netcat_mission
+treasure_missions
+log_missions
