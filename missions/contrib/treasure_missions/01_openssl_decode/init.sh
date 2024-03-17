@@ -22,7 +22,7 @@ _mission_init() {
   treasure_chest=$(eval_gettext '$GSH_HOME/Castle/Main_building/Throne_room/Safe')/$(gettext 'treasure_chest')
   password_file=$(eval_gettext '$GSH_HOME/Castle/Main_building/Throne_room/Safe')/$(gettext 'thePassword').py
 
-  cat $MISSION_DIR/data/password.py > $password_file
+  cat $MISSION_DIR/data/password/$(gettext 'en').py > $password_file
 
   # Lecture du mot de passe depuis le fichier password.txt
   password=$(cat "$MISSION_DIR/data/password.txt")

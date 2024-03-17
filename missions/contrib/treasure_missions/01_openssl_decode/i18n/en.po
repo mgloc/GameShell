@@ -27,3 +27,6 @@ msgstr  "The file 'treasure_chest.txt' doesn't exist..."
 
 msgid   "You did not decrypt the file 'treasure_chest.enc'"
 msgstr  "You did not decrypt the file 'treasure_chest.enc'"
+
+msgid   "en"
+msgstr  "en"
