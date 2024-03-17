@@ -19,6 +19,9 @@ msgstr  "$GSH_HOME/Castle/Main_building/Throne_room/safe"
 msgid   "treasure_chest"
 msgstr  "treasure_chest"
 
+msgid   "thePassword"
+msgstr  "thePassword"
+
 msgid   "The file 'treasure_chest.txt' doesn't exist..."
 msgstr  "The file 'treasure_chest.txt' doesn't exist..."
 
