@@ -1,0 +1,14 @@
+services:
+  gshdb:
+    image: postgres:9.6
+    environment:
+      POSTGRES_USER: gshuser
+      POSTGRES_PASSWORD: gshpasswd
+      POSTGRES_DB: gshdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - gshdb:/var/lib/postgresql/data
+
+volumes:
+  gshdb:
