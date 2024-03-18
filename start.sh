@@ -40,7 +40,7 @@ RESET=""
 # hack to parse long options --index-savefiles --overwrite-savefiles --simple-savefiles
 # cf https://stackoverflow.com/questions/402377/using-getopts-to-process-long-and-short-command-line-options
 _long_option=0
-while getopts ":hnPdDACRXUVqGL:KBZc:F-:" opt
+while getopts ":hnPOdDACRXUVqGL:KBZc:F-:" opt
 do
   if [ "$opt" = "-" ]
   then
@@ -69,6 +69,9 @@ do
       ;;
     P)
       GSH_MODE="PASSPORT"
+      ;;
+    O)
+      GSH_MODE="ONLINE"
       ;;
     d)
       GSH_MODE="DEBUG"
@@ -168,6 +171,22 @@ Run GameShell with either bash or zsh.")" >&2
   fi
 fi
 
+_online() {
+  local ONLINE_FILE=$1
+  GAME_SESSION_ID=""
+  while [ -z "$GAME_SESSION_ID" ]
+  do
+    printf "$(gettext "session id:") "
+    read -r GAME_SESSION_ID
+  done
+  GSH_API_URL=""
+  while [ -z "$GSH_API_URL" ]
+  do
+    printf "$(gettext "api url (example : gameshell.org):") "
+    read -r GSH_API_URL
+  done
+  echo "<api_url:$GSH_API_URL> <session_id:$GAME_SESSION_ID>" > "$ONLINE_FILE"
+}
 
 _passport() {
   local PASSPORT=$1
@@ -177,13 +196,7 @@ _passport() {
     printf "$(gettext "Player's name:") "
     read -r NOM
   done
-  GAME_SESSION_ID=""
-  while [ -z "$GAME_SESSION_ID" ]
-  do
-    printf "$(gettext "session id:") "
-    read -r GAME_SESSION_ID
-  done
-  echo "  $NOM <$GAME_SESSION_ID>" > "$PASSPORT"
+  echo "$NOM" > "$PASSPORT"
 }
 
 _confirm_passport() {
@@ -204,6 +217,126 @@ _confirm_passport() {
       return 1
     fi
   done
+}
+
+_confirm_online() {
+  local PASSPORT=$1
+  local ONLINE_FILE=$2
+  NAME=$(_read_passport_info "$PASSPORT" "name")
+  API_URL=$(_read_online_file_info "$ONLINE_FILE" "api_url")
+  SESSION_ID=$(_read_online_file_info "$ONLINE_FILE" "session_id")
+  echo "======================================================="
+  echo Player name : $NAME
+  echo Session id : $SESSION_ID
+  echo API url : $API_URL
+  echo "======================================================="
+  while true
+  do
+    printf "$(gettext "Is this information correct? [Y/n]") "
+    read -r OK
+    echo
+    if [ -z "$OK" ] || [ "$OK" = "$(gettext "y")" ] || [ "$OK" = "$(gettext "Y")" ]
+    then
+      return 0
+    elif [ "$OK" = "$(gettext "n")" ] || [ "$OK" = "$(gettext "N")" ]
+    then
+      return 1
+    fi
+  done
+}
+
+_read_passport_info(){
+  local PASSPORT_FILE=$1
+  local INFO_TYPE=$2
+
+  case $INFO_TYPE in
+    "name")
+      # return the name entered by the player
+      cat "$PASSPORT_FILE"
+      ;;
+    *)
+      echo "Invalid info type. Please use 'name'."
+      return 1
+      ;;
+  esac
+
+  return 0
+}
+
+_read_online_file_info(){
+  local ONLINE_FILE=$1
+  local INFO_TYPE=$2
+
+  case $INFO_TYPE in
+    "api_url")
+      # return the api url entered by the player
+      GSH_API_URL=$(head -n1 "$ONLINE_FILE" | sed -r 's/^.*<api_url:([^>]*)>.*$/\1/')
+      echo "$GSH_API_URL"
+      ;;
+    "session_id")
+      # return the session id of the player
+      GAME_SESSION_ID=$(head -n1 "$ONLINE_FILE" | sed -r 's/^.*<session_id:([^>]*)>.*$/\1/')
+      echo "$GAME_SESSION_ID"
+      ;;
+    *)
+      echo "Invalid info type. Please use 'name', 'api_url', or 'session_id'."
+      return 1
+      ;;
+  esac
+
+  return 0
+}
+
+_test_online() {
+  # test if we're connected
+  if command -v wget >/dev/null
+  then
+    if wget -q --spider https://www.google.com
+    then
+      return 0
+    fi
+  fi
+  return 1
+}
+
+_test_sessionexist(){
+  local GAME_SESSION_ID=$1
+  local GSH_API_URL=$2
+
+  echo "Testing if session $GAME_SESSION_ID exists. .."
+  SESSION_URL="http://$GSH_API_URL/gamesessions/$GAME_SESSION_ID"
+  echo "Current API gamesession: $SESSION_URL"
+  if wget -O/dev/null -q $SESSION_URL
+  then
+    return 0
+  fi
+  return 1
+}
+
+_api_connection(){
+  local ONLINE_FILE=$1
+  local PASSPORT=$2
+  local API_URL=$(_read_online_file_info "$ONLINE_FILE" "api_url")
+  local SESSION_ID=$(_read_online_file_info "$ONLINE_FILE" "session_id")
+  local NAME=$(_read_passport_info "$PASSPORT" "name")
+
+  echo "=================CONNECTION TESTING===================="
+  if _test_online
+  then
+    echo "Connected to the internet"
+    if _test_sessionexist $GAME_SESSION_ID $GSH_API_URL
+    then
+      echo "Session $SESSION_ID exists"
+      return 0
+    else
+      echo "Session $SESSION_ID does not exist or the provided url is not working, please double check your session id and url or use the offline mode"
+      return 1
+    fi
+  else
+    echo "Not connected to the internet, please use the offline mode"
+    return 1
+  fi
+  echo "======================================================="
 }
 
 progress() {
@@ -289,6 +422,7 @@ Do you want to remove it and start a new game? [y/N]') "
 
   # id of player
   PASSPORT="$GSH_CONFIG/passport.txt"
+  ONLINE_FILE="$GSH_CONFIG/online.txt"
 
   while true
   do
@@ -305,10 +439,18 @@ Do you want to remove it and start a new game? [y/N]') "
       PASSPORT)
         _passport "$PASSPORT"
         ;;
+      ONLINE)
+        _passport "$PASSPORT"
+        _online "$ONLINE_FILE"
+        ;;
     esac
-
+    
     # Check that the information is correct.
-    _confirm_passport "$PASSPORT" && break
+    if [ "$GSH_MODE" = "ONLINE" ]
+    then
+      _confirm_online "$PASSPORT" "$ONLINE_FILE" && _api_connection "$ONLINE_FILE" "$PASSPORT" && break #loop until online connection is not set # TODO
+    else _confirm_passport "$PASSPORT" && break
+    fi
   done
 
   # some random part added to the file so that GSH_UID is randomized
