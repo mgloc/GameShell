@@ -379,6 +379,12 @@ _gsh_check() {
     color_echo green "$(eval_gettext 'Congratulations, mission $MISSION_NB has been successfully completed!')"
     echo
 
+    if ["$GSH_MODE" -eq "ONLINE"]
+    then
+      source start.sh
+      
+    fi
+
     if [ -f "$MISSION_DIR/treasure.sh" ]
     then
       # Record the treasure to be loaded by GameShell's gshrc.

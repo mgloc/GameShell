@@ -23,6 +23,8 @@ export GSH_ROOT="$(dirname "$0")"
 . "$GSH_ROOT/lib/profile.sh"
 # shellcheck source=lib/mission_source.sh
 . "$GSH_ROOT/lib/mission_source.sh"
+# shellcheck source=lib/api.sh
+. "$GSH_ROOT/lib/api.sh"
 
 display_help() {
   cat "$(eval_gettext "\$GSH_ROOT/i18n/start-help/en.txt")"
@@ -263,82 +265,6 @@ _read_passport_info(){
   return 0
 }
 
-_read_online_file_info(){
-  local ONLINE_FILE=$1
-  local INFO_TYPE=$2
-
-  case $INFO_TYPE in
-    "api_url")
-      # return the api url entered by the player
-      GSH_API_URL=$(head -n1 "$ONLINE_FILE" | sed -r 's/^.*<api_url:([^>]*)>.*$/\1/')
-      echo "$GSH_API_URL"
-      ;;
-    "session_id")
-      # return the session id of the player
-      GAME_SESSION_ID=$(head -n1 "$ONLINE_FILE" | sed -r 's/^.*<session_id:([^>]*)>.*$/\1/')
-      echo "$GAME_SESSION_ID"
-      ;;
-    *)
-      echo "Invalid info type. Please use 'name', 'api_url', or 'session_id'."
-      return 1
-      ;;
-  esac
-
-  return 0
-}
-
-_test_online() {
-  # test if we're connected
-  if command -v wget >/dev/null
-  then
-    if wget -q --spider https://www.google.com
-    then
-      return 0
-    fi
-  fi
-  return 1
-}
-
-_test_sessionexist(){
-  local GAME_SESSION_ID=$1
-  local GSH_API_URL=$2
-
-  echo "Testing if session $GAME_SESSION_ID exists. .."
-  SESSION_URL="http://$GSH_API_URL/gamesessions/$GAME_SESSION_ID"
-  echo "Current API gamesession: $SESSION_URL"
-  if wget -O/dev/null -q $SESSION_URL
-  then
-    return 0
-  fi
-  return 1
-}
-
-_api_connection(){
-  local ONLINE_FILE=$1
-  local PASSPORT=$2
-  local API_URL=$(_read_online_file_info "$ONLINE_FILE" "api_url")
-  local SESSION_ID=$(_read_online_file_info "$ONLINE_FILE" "session_id")
-  local NAME=$(_read_passport_info "$PASSPORT" "name")
-
-  echo "=================CONNECTION TESTING===================="
-  if _test_online
-  then
-    echo "Connected to the internet"
-    if _test_sessionexist $GAME_SESSION_ID $GSH_API_URL
-    then
-      echo "Session $SESSION_ID exists"
-      return 0
-    else
-      echo "Session $SESSION_ID does not exist or the provided url is not working, please double check your session id and url or use the offline mode"
-      return 1
-    fi
-  else
-    echo "Not connected to the internet, please use the offline mode"
-    return 1
-  fi
-  echo "======================================================="
-}
-
 progress() {
   if [ -z "$progress_I" ]
   then
@@ -448,7 +374,7 @@ Do you want to remove it and start a new game? [y/N]') "
     # Check that the information is correct.
     if [ "$GSH_MODE" = "ONLINE" ]
     then
-      _confirm_online "$PASSPORT" "$ONLINE_FILE" && _api_connection "$ONLINE_FILE" "$PASSPORT" && break #loop until online connection is not set # TODO
+      _confirm_online "$PASSPORT" "$ONLINE_FILE" && _test_api_connection "$ONLINE_FILE" "$PASSPORT" && break #loop until online connection is not set # TODO
     else _confirm_passport "$PASSPORT" && break
     fi
   done
