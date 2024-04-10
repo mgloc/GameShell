@@ -7,6 +7,7 @@ $ ./start.sh -Rdq missions/contrib
 ---------------
 
 Liste des nouvelles missions :
+-------------
 
 missions sort et diff (2 missions): 
 Répertorier les différentes espèce du Jardin des fleurs
