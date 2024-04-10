@@ -1,5 +1,11 @@
-sort_diff_missions
-sed_missions
+sort_diff_missions/index.txt
+sed_missions/01_basic_sed
+sed_missions/02_regex_sed
 netcat_mission
-treasure_missions
-log_missions
+treasure_missions/index.txt
+log_missions/01_log
+log_missions/02_log
+log_missions/03_log
+log_missions/04_log
+log_missions/05_log
+log_missions/06_log

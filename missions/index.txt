@@ -17,4 +17,5 @@ finding_files_maze/04_find_2
 finding_files_maze/05_find_xargs_grep
 pipes_merchant_stall/index.txt
 misc/03_tr_caesar_shift
+contrib/index.txt
 FINAL_MISSION

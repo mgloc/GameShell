@@ -20,11 +20,11 @@
 _mission_init() {
 
   # put the record in the Castle
-  log=$(eval_gettext '$GSH_HOME/Castle/Main_building')/1306_$(gettext "record")
+  log=$(eval_gettext '$GSH_HOME/Castle/Main_building/Guard_room')/1306_$(gettext "record")
   python3 $MISSION_DIR/data/script/$(gettext "en") $log
 
   # put the template in the Castle
-  template=$(eval_gettext '$GSH_HOME/Castle/Main_building')/$(gettext "template")
+  template=$(eval_gettext '$GSH_HOME/Castle/Main_building/Guard_room')/$(gettext "template")
   cat $MISSION_DIR/data/template/$(gettext "en").txt > $template
 
   # get the answer

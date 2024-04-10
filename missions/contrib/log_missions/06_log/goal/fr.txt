@@ -4,7 +4,7 @@ Objectif
 Dans la salle des gardes (dans Batiment Principal, dans le Chateau) se trouve les fichiers journaux des entrées du chateau.
 Récupérer celui du 13 juin et analyser le.
 
-Quelle est l'espèce qui visit le plus ?
+Quelle est l'espèce qui visite le plus ?
 Lorsque vous connaissez la réponse, lancez la commande ``gsh check``.
 
 Commandes utiles

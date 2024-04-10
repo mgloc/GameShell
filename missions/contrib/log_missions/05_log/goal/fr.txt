@@ -1,7 +1,7 @@
 Objectif
 ========
 
-Dans la salle des gardes (dans Batiment Principal, dans le Chateau) se trouve les fichiers journaux des entrées du chateau.
+Dans la salle des gardes (dans le Batiment Principal, dans le Chateau) se trouve les fichiers journaux des entrées du chateau.
 Récupérer celui du 13 juin et analyser le.
 
 Quelles est l'heure la plus fréquentes à laquelle des erreurs ont été enregistrées ?

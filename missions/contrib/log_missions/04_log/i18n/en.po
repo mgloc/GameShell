@@ -11,8 +11,8 @@ msgstr "$MISSION_DIR/goal/en.txt"
 msgid "$MISSION_DIR/skip/en.txt"
 msgstr "$MISSION_DIR/skip/en.txt"
 
-msgid "$GSH_HOME/Castle/Main_building"
-msgstr "$GSH_HOME/Castle/Main_building"
+msgid "$GSH_HOME/Castle/Main_building/Guard_room"
+msgstr "$GSH_HOME/Castle/Main_building/Guard_room"
 
 msgid "record"
 msgstr "record"
