@@ -19,3 +19,13 @@ api.include_router(
     rooms.router,
     tags=["Rooms"],
 )
+
+
+@api.get("/hello")
+def hello():
+    return {"message": "Hello World"}
+
+
+@api.post("/hello")
+def hello_post(data: dict):
+    return {"message": "Hello Post", "data": data}

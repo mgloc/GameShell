@@ -25,8 +25,10 @@ class PlayerCreate(PlayerBase):
 class PlayerRead(PlayerBase):
     username: str | None = None
     progress: str | None = None
+    room: Room | None = None
 
 
 class PlayerUpdate(PlayerBase):
     username: str | None = None
     progress: str | None = None
+    room_id: str | None = None

@@ -47,13 +47,13 @@ _api_request(){
       API_RESPONSE=$(wget -qO- "$API_URL/$API_ENDPOINT")
       ;;
     "POST")
-      API_RESPONSE=$(wget -qO- --post-data="$DATA" "$API_URL/$API_ENDPOINT")
+      API_RESPONSE=$(wget -qO- --header="Content-Type: application/json" --post-data="$DATA" "$API_URL/$API_ENDPOINT")
       ;;
     "PUT")
-      API_RESPONSE=$(wget -qO- --method=PUT --body-data="$DATA" "$API_URL/$API_ENDPOINT")
+      API_RESPONSE=$(wget -qO- --header="Content-Type: application/json" --method=PUT --body-data="$DATA" "$API_URL/$API_ENDPOINT")
       ;;
     "DELETE")
-      API_RESPONSE=$(wget -qO- --method=DELETE "$API_URL/$API_ENDPOINT")
+      API_RESPONSE=$(wget -qO- --header="Content-Type: application/json" --method=DELETE "$API_URL/$API_ENDPOINT")
       ;;
     *)
       echo "Invalid method. Please use 'GET', 'POST', 'PUT', or 'DELETE'."
